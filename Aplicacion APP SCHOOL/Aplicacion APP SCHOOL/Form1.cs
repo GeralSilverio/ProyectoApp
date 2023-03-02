@@ -10,21 +10,41 @@ using System.Windows.Forms;
 
 namespace Aplicacion_APP_SCHOOL
 {
-    public partial class Form1 : Form
+    public partial class FormPrincipal : Form
     {
-        public Form1()
+        //------Metodo para guardar el menu vertical----------------------------------
+        public void GuardarMenuVertical()
+        {
+
+            if (MenuVertical.Width == 164)
+            {
+                MenuVertical.Width = 50;
+            }
+            else
+            {
+                MenuVertical.Width = 164;
+            }
+        }
+        public FormPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
         //-----------------------------Boton Salir--------------------------------------------------
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        //----------------------------Boton Controlar Menu Vertical-------------------------------------------------
+        private void btnControlMenu_Click_1(object sender, EventArgs e)
+        {
+            GuardarMenuVertical();
+        }
+
+        private void btnLista_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
+   
 }
