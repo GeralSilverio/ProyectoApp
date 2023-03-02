@@ -16,5 +16,15 @@ namespace Aplicacion_APP_SCHOOL
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //-----------------------------Boton Salir--------------------------------------------------
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
