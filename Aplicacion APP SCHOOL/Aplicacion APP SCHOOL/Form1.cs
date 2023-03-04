@@ -7,12 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Aplicacion_APP_SCHOOL
 {
     public partial class FormPrincipal : Form
     {
-        //------Metodo para guardar el menu vertical----------------------------------
+        public FormPrincipal()
+        {
+            InitializeComponent();
+        }
+        //-------------------------------------------------------------------------------------------------------------------
+        
+            //------Metodo para guardar el menu vertical Funcionado----------------------------------
         public void GuardarMenuVertical()
         {
 
@@ -25,7 +32,7 @@ namespace Aplicacion_APP_SCHOOL
                 MenuVertical.Width = 164;
             }
         }
-        //-------------------Metodo Para abrir las ventanas--------------------------------
+        //-------------------Metodo Para abrir las ventanas Funcionando--------------------------------
         private void AbrirVentana(object FormHijo)
         {
             if (this.PanelPrincipal.Controls.Count > 0)
@@ -37,22 +44,32 @@ namespace Aplicacion_APP_SCHOOL
             this.PanelPrincipal.Tag = fh;
             fh.Show();
         }
-
-          
-        public FormPrincipal()
-        {
-            InitializeComponent();
-        }
-        //-----------------------------Boton Salir--------------------------------------------------
+ 
+        //-----------------------------Boton Salir Funcionado--------------------------------------------------
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        //----------------------------Boton Controlar Menu Vertical-------------------------------------------------
+        //----------------------------Boton Controlar Menu Vertical Funcionando-------------------------------------------------
         private void btnControlMenu_Click_1(object sender, EventArgs e)
         {
-            GuardarMenuVertical();
+           GuardarMenuVertical();
         }
+        
+        //------------------Boton ir a Registro Funcionando----------------------------
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new Registro());
+        }
+
+
+      
+
+
+
+
+
+
         private void btnLista_Click(object sender, EventArgs e)
         {
             
@@ -60,16 +77,17 @@ namespace Aplicacion_APP_SCHOOL
 
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
-            AbrirVentana(new Inicio());
+            
+           AbrirVentana(new Inicio());
         }
 
-        private void btnRegistro_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new Registro());
-        }
+        
+       
 
-      
+       
+
+
     }
 
-   
+
 }
