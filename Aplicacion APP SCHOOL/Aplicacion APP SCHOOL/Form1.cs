@@ -25,6 +25,20 @@ namespace Aplicacion_APP_SCHOOL
                 MenuVertical.Width = 164;
             }
         }
+        //-------------------Metodo Para abrir las ventanas--------------------------------
+        private void AbrirVentana(object FormHijo)
+        {
+            if (this.PanelPrincipal.Controls.Count > 0)
+                this.PanelPrincipal.Controls.RemoveAt(0);
+            Form fh = FormHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.PanelPrincipal.Controls.Add(fh);
+            this.PanelPrincipal.Tag = fh;
+            fh.Show();
+        }
+
+          
         public FormPrincipal()
         {
             InitializeComponent();
@@ -39,11 +53,22 @@ namespace Aplicacion_APP_SCHOOL
         {
             GuardarMenuVertical();
         }
-
         private void btnLista_Click(object sender, EventArgs e)
         {
-
+            
         }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new Inicio());
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new Registro());
+        }
+
+      
     }
 
    

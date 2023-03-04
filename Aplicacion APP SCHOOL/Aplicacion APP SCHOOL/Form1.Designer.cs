@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.btnControlMenu = new System.Windows.Forms.PictureBox();
@@ -36,9 +37,15 @@
             this.btnRetos = new System.Windows.Forms.Button();
             this.btnLista = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnControlMenu)).BeginInit();
+            this.PanelPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -86,6 +93,7 @@
             this.btnPrincipal.TabIndex = 3;
             this.btnPrincipal.Text = "           APP SCHOOL";
             this.btnPrincipal.UseVisualStyleBackColor = true;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // btnSalir
             // 
@@ -160,15 +168,43 @@
             this.btnRegistro.TabIndex = 0;
             this.btnRegistro.Text = "      REGISTRO";
             this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
-            // panel2
+            // PanelPrincipal
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(164, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(720, 461);
-            this.panel2.TabIndex = 1;
+            this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
+            this.PanelPrincipal.Controls.Add(this.label1);
+            this.PanelPrincipal.Controls.Add(this.pictureBox1);
+            this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelPrincipal.Location = new System.Drawing.Point(164, 0);
+            this.PanelPrincipal.Name = "PanelPrincipal";
+            this.PanelPrincipal.Size = new System.Drawing.Size(720, 461);
+            this.PanelPrincipal.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(266, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(195, 153);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(100, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(533, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "WELCOME TO APP SCHOOL PRACTICE";
             // 
             // FormPrincipal
             // 
@@ -176,13 +212,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PanelPrincipal);
             this.Controls.Add(this.MenuVertical);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
             this.Text = "APP SCHOOL PRACTICE";
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnControlMenu)).EndInit();
+            this.PanelPrincipal.ResumeLayout(false);
+            this.PanelPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,13 +230,16 @@
         #endregion
 
         private System.Windows.Forms.Panel MenuVertical;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PanelPrincipal;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRetos;
         private System.Windows.Forms.Button btnLista;
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.PictureBox btnControlMenu;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
