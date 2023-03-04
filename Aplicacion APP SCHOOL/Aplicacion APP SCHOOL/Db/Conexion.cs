@@ -30,7 +30,8 @@ namespace conexion
                 Console.Writeline("se ha conectado correctamente");
             }
             catch (Exepcion ex)
-            {
+namespace Aplicacion_APP_SCHOOL
+{
                 Console.Writeline("error al abrir "+Exepxion ex );
                 throw;
             }
@@ -38,6 +39,7 @@ namespace conexion
     }
 
     public void cerrar()
+    internal class Conexion
     {
         sqlConnection.close();
     }
