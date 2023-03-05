@@ -74,13 +74,14 @@ namespace Aplicacion_APP_SCHOOL
         {
             
         }
-
+        //------------Boton hacia el menu principal FUNCIONANDO-----------------------------------
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
             
            AbrirVentana(new Inicio());
         }
 
+        //-------------Metodo para que se presente el menu principal desde que inicia el programa.---------------------
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             btnPrincipal_Click(null, e);
