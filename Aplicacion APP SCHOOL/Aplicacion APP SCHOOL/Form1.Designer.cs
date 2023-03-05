@@ -37,8 +37,8 @@
             this.btnRetos = new System.Windows.Forms.Button();
             this.btnLista = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
-            this.PanelPrincipal = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PanelPrincipal = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnControlMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -166,30 +166,29 @@
             this.btnRegistro.UseVisualStyleBackColor = true;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
-            // PanelPrincipal
-            // 
-            this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
-            this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelPrincipal.Location = new System.Drawing.Point(164, 0);
-            this.PanelPrincipal.Name = "PanelPrincipal";
-            this.PanelPrincipal.Size = new System.Drawing.Size(720, 461);
-            this.PanelPrincipal.TabIndex = 1;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // PanelPrincipal
+            // 
+            this.PanelPrincipal.Location = new System.Drawing.Point(159, 0);
+            this.PanelPrincipal.Name = "PanelPrincipal";
+            this.PanelPrincipal.Size = new System.Drawing.Size(724, 461);
+            this.PanelPrincipal.TabIndex = 1;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.PanelPrincipal);
             this.Controls.Add(this.MenuVertical);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
             this.Text = "APP SCHOOL PRACTICE";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnControlMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -200,7 +199,6 @@
         #endregion
 
         private System.Windows.Forms.Panel MenuVertical;
-        private System.Windows.Forms.Panel PanelPrincipal;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRetos;
@@ -208,6 +206,7 @@
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.PictureBox btnControlMenu;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel PanelPrincipal;
     }
 }
 

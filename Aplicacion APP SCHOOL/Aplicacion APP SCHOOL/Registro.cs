@@ -16,5 +16,7 @@ namespace Aplicacion_APP_SCHOOL
         {
             InitializeComponent();
         }
+
+        
     }
 }

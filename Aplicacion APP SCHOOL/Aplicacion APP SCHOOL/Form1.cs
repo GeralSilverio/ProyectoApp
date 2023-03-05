@@ -69,7 +69,7 @@ namespace Aplicacion_APP_SCHOOL
 
 
 
-
+    
         private void btnLista_Click(object sender, EventArgs e)
         {
             
@@ -81,12 +81,10 @@ namespace Aplicacion_APP_SCHOOL
            AbrirVentana(new Inicio());
         }
 
-        
-       
-
-       
-
-
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            btnPrincipal_Click(null, e);
+        }
     }
 
 
